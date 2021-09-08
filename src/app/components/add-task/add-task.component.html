@@ -1,4 +1,4 @@
-<form class="add-form" (ngSubmit)="onSubmit()">
+<form *ngIf="showAddTask" class="add-form" (ngSubmit)="onSubmit()">
     <!-- ngSubmit podpina sie do eventa onSubmit,
         dodatkowo jeśli form nie ma action to robi preventDefault
         zeby nie bylo reloada po submicie -->
