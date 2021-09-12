@@ -9,6 +9,7 @@ export class HelloWorldBindingsComponent {
   sayHelloId = 1;
   canClick = false;
   message = 'Hello, World';
+  editable = true;
  
   sayMessage() {
     alert(this.message);
