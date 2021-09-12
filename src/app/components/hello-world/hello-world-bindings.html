@@ -6,7 +6,10 @@
 <p
   [id]="sayHelloId"
   [style.color]="fontColor"
-  *ngIf=showParagraph()>
+  *ngIf="showParagraph(); else noParagraph">
   You can set my color in the component!
 </p>
+<ng-template #noParagraph>
+    <p>The following paragraph is shown when condition is false!</p>
+</ng-template>
 <p>My color is {{ fontColor }}</p>

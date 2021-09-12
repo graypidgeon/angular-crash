@@ -15,7 +15,7 @@ export class HelloWorldBindingsComponent {
   }
 
   showParagraph() {
-      return true;
+      return false;
   }
  
 }
