@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
+import { ProductsService } from 'src/app/services/product-list/products.service';
 
 @Component({
   selector: 'app-product-list',
@@ -8,15 +9,13 @@ import { Product } from 'src/app/model/product';
 })
 export class ProductListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private productsService: ProductsService) {
+    this.products = productsService.getProducts();
+  }
 
   ngOnInit(): void {
   }
-  products:Product[] = [
-    {name: "asd", description: "ddd"},
-    {name: "bobo", description: "ssz"},
-    {name: "koko", description: "www"},
-  ];
+  products:Product[];
 
   share() {
     window.alert('The product has been shared!');
