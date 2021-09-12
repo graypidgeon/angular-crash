@@ -19,10 +19,13 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
 import { AboutComponent } from './pages/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HelloWorldModule } from './components/hello-world/hello-world.module';
+import { ProductModule } from './components/product/product.module';
+import { ProductListComponent } from './components/product/product-list/product-list.component';
 
 const appRoutes: Routes = [
   {path: '', component: TasksComponent},
-  {path: 'about', component: AboutComponent}
+  {path: 'about', component: AboutComponent},
+  {path: 'products', component: ProductListComponent}
 ]
 
 @NgModule({
@@ -34,7 +37,7 @@ const appRoutes: Routes = [
     TaskItemComponent,
     AddTaskComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(appRoutes, {enableTracing: true}),
-    HelloWorldModule
+    HelloWorldModule,
+    ProductModule
   ],
   providers: [],
   bootstrap: [AppComponent]
