@@ -18,7 +18,7 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { AboutComponent } from './pages/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HelloWorldComponent } from './components/hello-world/hello-world';
+import { HelloWorldModule } from './components/hello-world/hello-world.module';
 
 const appRoutes: Routes = [
   {path: '', component: TasksComponent},
@@ -34,15 +34,15 @@ const appRoutes: Routes = [
     TaskItemComponent,
     AddTaskComponent,
     AboutComponent,
-    FooterComponent,
-    HelloWorldComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes, {enableTracing: true})
+    RouterModule.forRoot(appRoutes, {enableTracing: true}),
+    HelloWorldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
