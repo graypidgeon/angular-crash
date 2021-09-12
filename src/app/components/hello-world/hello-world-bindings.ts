@@ -13,5 +13,9 @@ export class HelloWorldBindingsComponent {
   sayMessage() {
     alert(this.message);
   }
+
+  showParagraph() {
+      return true;
+  }
  
 }

@@ -5,7 +5,8 @@
 </button>
 <p
   [id]="sayHelloId"
-  [style.color]="fontColor">
+  [style.color]="fontColor"
+  *ngIf=showParagraph()>
   You can set my color in the component!
 </p>
 <p>My color is {{ fontColor }}</p>
