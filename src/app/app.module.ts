@@ -21,12 +21,14 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductModule } from './components/product/product.module';
 import { ProductListComponent } from './components/product/product-list/product-list.component';
 import { ProductDetailsComponent } from './components/product/product-details/product-details.component';
+import { CartComponent } from './components/product/cart/cart.component';
 
 const appRoutes: Routes = [
   {path: '', component: TasksComponent},
   {path: 'about', component: AboutComponent},
   {path: 'products', component: ProductListComponent},
   {path: 'products/:productId', component: ProductDetailsComponent },
+  {path: 'cart', component: CartComponent },
 ]
 
 @NgModule({
