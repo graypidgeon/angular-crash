@@ -5,6 +5,8 @@
 <!-- phone refers to the input element; pass its `value` to an event handler -->
 <button (click)="printMessage(phone.value)">Call</button>
 
+<hr/>
+
 <form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
     <label for="name">Name <input class="form-control" name="name" ngModel required />
     </label>
@@ -14,3 +16,8 @@
 <div [hidden]="!itemForm.form.valid">
     <p>{{ submitMessage }}</p>
 </div>
+
+<hr/>
+
+<input #ref1 type="text" />
+<span >Value: {{ ref1.value }}</span>
