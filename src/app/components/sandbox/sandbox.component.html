@@ -21,3 +21,12 @@
 
 <input #ref1 type="text" />
 <span >Value: {{ ref1.value }}</span>
+
+<hr/>
+
+<ng-template #hero let-hero="hero" let-i="index" let-odd="isOdd">
+    dupa
+    <div [class]="{'odd-row': odd}">{{i}}:{{hero}}</div>
+</ng-template>
+
+<ng-template [ngTemplateOutlet]="hero" [ngTemplateOutletContext]="{index:'12', isOdd: 'true', hero: 'dupek'}"></ng-template>
