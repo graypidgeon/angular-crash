@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-sandbox',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SandboxComponent implements OnInit {
 
+  submitMessage = "wsio ok";
+
   constructor() { }
 
   ngOnInit(): void {
@@ -14,5 +17,9 @@ export class SandboxComponent implements OnInit {
 
   printMessage(text: string) {
     alert(text);
+  }
+
+  onSubmit(form: NgForm) {
+    console.log(form.controls["name"].value);
   }
 }
