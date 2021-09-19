@@ -22,6 +22,7 @@ import { ProductModule } from './components/product/product.module';
 import { ProductListComponent } from './components/product/product-list/product-list.component';
 import { ProductDetailsComponent } from './components/product/product-details/product-details.component';
 import { CartComponent } from './components/product/cart/cart.component';
+import { SandboxComponent } from './components/sandbox/sandbox.component';
 
 const appRoutes: Routes = [
   {path: '', component: TasksComponent},
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
   {path: 'products', component: ProductListComponent},
   {path: 'products/:productId', component: ProductDetailsComponent },
   {path: 'cart', component: CartComponent },
+  {path: 'sandbox', component: SandboxComponent },
 ]
 
 @NgModule({
@@ -41,6 +43,7 @@ const appRoutes: Routes = [
     AddTaskComponent,
     AboutComponent,
     FooterComponent,
+    SandboxComponent,
   ],
   imports: [
     BrowserModule,
