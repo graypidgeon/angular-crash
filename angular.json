@@ -24,11 +24,27 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "ignore": ["**/*.md"],
+                "input": "src/testAssets/",
+                "output": "testAssets2/"
+              }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              {
+                "input": "src/external-module/styles.scss",
+                "inject": false,
+                "bundleName": "ext"
+              }
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/style-paths"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
